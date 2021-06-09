@@ -32,8 +32,12 @@ https://amanokaze.github.io/blog/SB-VJ-PS-Setting/
   -- Installing DevExtreme CLI
      $ npm i -g devextreme-cli
   -- Create a new DevExtreme Vue application that uses the DevExtreme layout template:
-     [vue-dashboard 이름을 갖는 vue-app을 생성]
+     [vue-dashboard 이름을 갖는 vue-app을 생성, 현재 디렉토리에 생성되는 것 같으니 주의필요]
      $ devextreme new vue-app vue-dashboard
+  -- 프로젝트 렉토리에 들어가서 'npm run serve' 실행
+     $ C:\Users\rich>cd vue-dashboard
+     $ npm run serve
+  -- 병신같은 경로에 만들어진 프로젝트를 다른 곳에 사용하자.
   
 
 ------------------------------------------------------------------------------------------
