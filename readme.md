@@ -3,6 +3,8 @@
 1. Vue.js[DevExtreme] - Github - Nginx - SpringBoot - MariaDB를 활용한 웹 대시보드 구축
 
 https://amanokaze.github.io/blog/SB-VJ-PS-Setting/
+https://github.com/jonashackt/spring-boot-vuejs [Vue / SpringBoot 분리]
+https://mr-spock.tistory.com/3 [Vue를 SpringBoot 프로젝트 안으로]
 
 <2021-06-13>
 * vue3 버전으로 DevExtreme vue-dashborad 프로젝트를 C:\Develop 디렉토리에 생성
@@ -32,12 +34,7 @@ https://amanokaze.github.io/blog/SB-VJ-PS-Setting/
   -- 2개의 명령어를 실행하면 "Your application is running here: http://localhost:8080" 이라고 뜬다.
   -- 웹화면을 확인할 수 있다.
 
-1-3. vue 개발환경
-  -- javascript framework인데, 별도의 개발환경이 필요한 것일까?
-  -- 온라인에서는 보통 VScode 프로그램을 사용하여 화면을 개발하고 있다.
-     -- 화면개발 내용에 대한 즉각적인 확인 및 코드에 대한 tip 확인이 가능하다.
-  -- 
-  
+ 
 1-3. DevExtreme 활용해 보기
   -- Installing DevExtreme CLI
      $ npm i -g devextreme-cli
@@ -49,7 +46,29 @@ https://amanokaze.github.io/blog/SB-VJ-PS-Setting/
      $ npm run serve
   -- 병신같은 경로에 만들어진 프로젝트를 다른 곳에 사용하자.
   -- DevExtreme을 활용하여 프로젝트를 만들었다면, DevExtreme에서 제공하는 샘플UI를 담은 Vue프로젝트일 뿐이다.
+
+
+1-4. vue 개발환경 [Visual Studio Code 설치]
+  -- javascript framework인데, 별도의 개발환경이 필요한 것일까?
+  -- 온라인에서는 보통 VScode 프로그램을 사용하여 화면을 개발하고 있다.
+     -- 화면개발 내용에 대한 즉각적인 확인 및 코드에 대한 tip 확인이 가능하다.
+
+  -- https://code.visualstudio.com/ 접속
+  -- 설치버전으로 할 경우 다양한 가이드에서 처럼 cmd창에서 code 명령어로 프로젝트 오픈이 가능할 것
+  -- zip버전으로 사용해도 vue-dashboard 프로젝트 폴더를 오픈할 경우 동일하게 사용이 가능하다.
+  -- VSCode에서 Vetur Extention을 설치해 준다. [아직 뭔지는 모름]
+  -- VSCode에서 제공하는 cmd터미널을 통해 Vue프로젝트가 로컬에 뜨는 것을 확인하였다.
   
+  
+1-5. Vue 프로젝트를 SpringBoot 웹프로젝트의 화면으로 사용하고자 한다면 어떻게 해야할까?
+
+
+
+
+
+
+
+
 
 ------------------------------------------------------------------------------------------
 PS C:\Users\rich> npm -v
