@@ -1,8 +1,13 @@
 <MSA Advanced TCL 목표>
 
-1. SpringBoot - Vue.js[DevExtreme] - MariaDB를 활용한 웹 대시보드 구축
+1. Vue.js[DevExtreme] - Github - Nginx - SpringBoot - MariaDB를 활용한 웹 대시보드 구축
 
 https://amanokaze.github.io/blog/SB-VJ-PS-Setting/
+
+<2021-06-13>
+* vue3 버전으로 DevExtreme vue-dashborad 프로젝트를 C:\Develop 디렉토리에 생성
+* 
+
 
 1-1. vue.js 설치하기
    -- 기본적으로는 JQuery와 유사하게 <script></script> 구문 추가로 사용 가능
@@ -16,7 +21,7 @@ https://amanokaze.github.io/blog/SB-VJ-PS-Setting/
      -- 환경변수 등을 모두 확인해 보아도, vue 명령어가 실행이 안 된다.
      -- 환경변수 설정 후 powershell이 아닌 cmd에서는 잘 실행됨 [이상하네..]
        
-1-2. vue 프로젝트 생성
+1-2. vue 프로젝트 생성 [Vue3 활용할 계획]
   -- webpack 패키지를 활용하여 my-project를 생성한다.
   -- $ vue init webpack my-project
   -- 이상한 팅을 오지게 물어보고 설치해줌
@@ -26,7 +31,12 @@ https://amanokaze.github.io/blog/SB-VJ-PS-Setting/
       npm run dev
   -- 2개의 명령어를 실행하면 "Your application is running here: http://localhost:8080" 이라고 뜬다.
   -- 웹화면을 확인할 수 있다.
-  
+
+1-3. vue 개발환경
+  -- javascript framework인데, 별도의 개발환경이 필요한 것일까?
+  -- 온라인에서는 보통 VScode 프로그램을 사용하여 화면을 개발하고 있다.
+     -- 화면개발 내용에 대한 즉각적인 확인 및 코드에 대한 tip 확인이 가능하다.
+  -- 
   
 1-3. DevExtreme 활용해 보기
   -- Installing DevExtreme CLI
@@ -38,6 +48,7 @@ https://amanokaze.github.io/blog/SB-VJ-PS-Setting/
      $ C:\Users\rich>cd vue-dashboard
      $ npm run serve
   -- 병신같은 경로에 만들어진 프로젝트를 다른 곳에 사용하자.
+  -- DevExtreme을 활용하여 프로젝트를 만들었다면, DevExtreme에서 제공하는 샘플UI를 담은 Vue프로젝트일 뿐이다.
   
 
 ------------------------------------------------------------------------------------------
