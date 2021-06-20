@@ -76,6 +76,10 @@ https://mr-spock.tistory.com/3 [Vue를 SpringBoot 프로젝트 안으로]
            -- $ apt-get update && apt-get install nano vim
         -- Mariadb 설정파일을 수정해 주자
            -- $ vi /etc/mysql/my.cnf
+           
+           lower_case_table_names default값인 0으로 사용하면
+           테이블명의 검색에 대한 대소문자 구분이 되니 반드시 바꿔주자
+           
            -----------------------------------------
             [client]
             default-character-set = utf8mb4
@@ -84,6 +88,7 @@ https://mr-spock.tistory.com/3 [Vue를 SpringBoot 프로젝트 안으로]
             default-character-set = utf8mb4
 
             [mysqld]
+            lower_case_table_names = 1
             character-set-client-handshake = FALSE
             character-set-server = utf8mb4
             collation-server = utf8mb4_unicode_ci
@@ -111,9 +116,17 @@ https://mr-spock.tistory.com/3 [Vue를 SpringBoot 프로젝트 안으로]
 
 
 1-6. API요청을 받으면 DB의 데이터를 회신해 주는 간단한 SpringBoot API 기능을 만들어보자.
+
   -- 우선은 인증기능 없이 단순한 형태의 RestAPI를 어떤 방식으로 생성할 수 있는지 확인한다.
-  -- https://daddyprogrammer.org/post/41/spring-boot2-helloworld/
-  -- 
+  -- https://goddaehee.tistory.com/205
+  -- 망할 SpringBoot 새끼들, 프로젝트 만들면 계속 pom파일에 unknown에러 발생
+     -- pom.xml <properties> 태그에 아래의 한 줄 추가하니 문제해결
+     <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+  -- App과 관련된 Default세팅은 모두 application.properties에 넣는다.
+  -- Mariadb관련 dependency를 수정해 주고, 관련된 세팅을 application.properties에 넣는다.
+  -- Mybatis를 활용하는 정식적인 방법을 정리하고 템플릿화 해야겠다.
+  -- SpringBoot Controller에서 @RestController를 사용해야 return String값이 먹히고
+     @Controller를 사용할 경우 화면세팅을 만들어야만 한다.
 
 
 ------------------------------------------------------------------------------------------
