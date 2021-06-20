@@ -90,9 +90,24 @@ https://mr-spock.tistory.com/3 [Vue를 SpringBoot 프로젝트 안으로]
            -----------------------------------------
         -- Mariadb 컨테이너 재시작
         $ docker restart mariadb
-
-
-
+        -- DBeaver 툴을 활용해 연결상태 확인
+           -- Server Host : localhost [3306]
+           -- username, password 입력 후 연결 확인
+        -- 테스트로 database를 생성 [https://jdm.kr/blog/132]
+            $ create database test;
+            $ create user 'test'@'%' identified by 'test';
+            $ grant all privileges on test.* to 'test'@'%';
+            $ flush privileges;
+        -- DBeaver 툴에서 test 데이터 베이스에 대해 id/pass(test/test) 값으로 접속되는지 확인
+           $ show databases; 
+           $ use test;
+           $ show tables; [아직 아무런 테입블이 없다.]
+           $ create table user_info (user_id varchar(10), user_name varchar(20), hand_phone varchar(20));
+           $ select * from user_info [아직 테이블에 데이터가 1건도 없다.]
+           $ insert into user_info(user_id, user_name, hand_phone) values('09340', '이호영', '010-0000-0000');
+           $ insert into user_info(user_id, user_name, hand_phone) values('09275', '박정수', '010-0000-0000');
+           $ insert into user_info(user_id, user_name, hand_phone) values('09341', '누구쇼', '010-0000-0000');
+        -- 지금까지 vue.js -> api -> db를 통해 확인할 테스트 데이터를 생성해 보았다.
 
 ------------------------------------------------------------------------------------------
 PS C:\Users\rich> npm -v
