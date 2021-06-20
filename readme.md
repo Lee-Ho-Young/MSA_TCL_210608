@@ -109,6 +109,13 @@ https://mr-spock.tistory.com/3 [Vue를 SpringBoot 프로젝트 안으로]
            $ insert into user_info(user_id, user_name, hand_phone) values('09341', '누구쇼', '010-0000-0000');
         -- 지금까지 vue.js -> api -> db를 통해 확인할 테스트 데이터를 생성해 보았다.
 
+
+1-6. API요청을 받으면 DB의 데이터를 회신해 주는 간단한 SpringBoot API 기능을 만들어보자.
+  -- 우선은 인증기능 없이 단순한 형태의 RestAPI를 어떤 방식으로 생성할 수 있는지 확인한다.
+  
+
+
+
 ------------------------------------------------------------------------------------------
 PS C:\Users\rich> npm -v
 6.14.13
