@@ -60,12 +60,36 @@ https://mr-spock.tistory.com/3 [Vue를 SpringBoot 프로젝트 안으로]
   -- VSCode에서 제공하는 cmd터미널을 통해 Vue프로젝트가 로컬에 뜨는 것을 확인하였다.
   
   
-1-5. Vue 프로젝트를 SpringBoot 웹프로젝트의 화면으로 사용하고자 한다면 어떻게 해야할까?
+1-5. MariaDB 세팅
+  -- 간단하게 Docker 환경에 올리자
+  -- 테스트 환경인 Windows Docker에서 실행하기 위해서는 아래와 같이 진행한다.
+  -- cmd창에서
+     -- $ docker pull mariadb
+     -- $ docker run --name mariadb -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mariadb mariadb
+     -- $ docker ps [Maridb 컨테이너 확인가능]
+       -- $ mysql -u root -p [Maridb를 CMD창에서 바로 접속 가능]
+       -- $ docker exec -it mariadb /bin/bash
+          $ mysql -u root -p [Mariadb를 컨테이너 내부에서 접속 가능]
+          
+     -- 컨테이너에 설치한 Mariadb 설정
+        -- 컨테이너 환경에서는 VI에디터가 깔려있지 않다. 먼저 깔아주자
+           -- $ apt-get update && apt-get install nano vim
+        -- Mariadb 설정파일을 수정해 주자
+           -- $ vi /etc/mysql/my.cnf
+           -----------------------------------------
+            [client]
+            default-character-set = utf8mb4
 
+            [mysql]
+            default-character-set = utf8mb4
 
-
-
-
+            [mysqld]
+            character-set-client-handshake = FALSE
+            character-set-server = utf8mb4
+            collation-server = utf8mb4_unicode_ci
+           -----------------------------------------
+        -- Mariadb 컨테이너 재시작
+        $ docker restart mariadb
 
 
 
