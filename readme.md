@@ -112,8 +112,8 @@ https://mr-spock.tistory.com/3 [Vue를 SpringBoot 프로젝트 안으로]
 
 1-6. API요청을 받으면 DB의 데이터를 회신해 주는 간단한 SpringBoot API 기능을 만들어보자.
   -- 우선은 인증기능 없이 단순한 형태의 RestAPI를 어떤 방식으로 생성할 수 있는지 확인한다.
-  
-
+  -- https://daddyprogrammer.org/post/41/spring-boot2-helloworld/
+  -- 
 
 
 ------------------------------------------------------------------------------------------
